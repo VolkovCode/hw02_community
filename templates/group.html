@@ -4,6 +4,7 @@
   <body>
     <h1>{{ group.title }}</h1>
     <p>{{ group.description }}</p>
+    
     {% for post in posts %}
     <h3>
         Автор: {{ post.author }}, дата публикации: {{ post.pub_date|date:"d M Y" }}
@@ -11,5 +12,6 @@
     <p> {{ post.text }}</p>
     <hr>
     {% endfor %}
+  
   </body>
 {% endblock %}
