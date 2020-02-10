@@ -2,8 +2,6 @@ from django.shortcuts import render, get_object_or_404
 import datetime
 from .models import Post, Group
 
-start_date = datetime.date(1890, 1, 1)
-end_date = datetime.date(1895, 3, 31)
 
 def index(request):
     latest = Post.objects.order_by("-pub_date")[:11]
